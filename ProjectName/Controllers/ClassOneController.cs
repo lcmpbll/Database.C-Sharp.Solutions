@@ -5,13 +5,13 @@ using ProjectName.Models;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BestRestaurants.Controllers
+namespace ProjectName.Controllers
 {
-  public class RestaurantController : Controller
+  public class ClassOneController : Controller
   {
-    private readonly BestRestaurantsContext _db;
+    private readonly ProjectNameContext _db;
 
-    public RestaurantController(BestRestaurantsContext db)
+    public ClassOneController(ProjectNameContext db)
     {
       _db = db;
     }
@@ -19,7 +19,7 @@ namespace BestRestaurants.Controllers
     public ActionResult Index()
     {
       List<ClassOne> model = _db.ClassOnes.Include(classOne => classOne.ClassTwo).ToList();
-        return View(model);
+      return View(model);
     }
   }
 }

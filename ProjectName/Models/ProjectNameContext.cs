@@ -4,8 +4,8 @@ namespace ProjectName.Models
 {
   public class ProjectNameContext : DbContext
   {
-    public DbSet<Cuisine> Cuisine { get; set; }
-    public DbSet<Restaurant> Restaurant { get; set; }
+    public DbSet<CLassOne> ClassOne { get; set; }
+    public DbSet<ClassTwo> ClassTwo { get; set; }
 
     public ProjectNameContext(DbContextOptions options) : base(options) { }
 

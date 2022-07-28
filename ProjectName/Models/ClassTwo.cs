@@ -1,7 +1,13 @@
 namespace ProjectName.Models
 {
-  public class ClassName
+  public class ClassTwo
   {
-    // properties, constructors, methods, etc. go here
+    public ClassTwo()
+    {
+      this.ClassOnes = new HashSet<ClassOne>();
+    }
+
+    public int ClassTwoId { get; set; }
+    public virtual ICollection<ClassOne> ClassOnes { get; set; }
   }
 }
